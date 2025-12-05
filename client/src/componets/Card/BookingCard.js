@@ -159,7 +159,7 @@
 
 import { currencyFormatter } from "../../actions/stripe";
 import { difDays } from "../../actions/hotel";
-import { useNavigate } from "react-router";
+import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 import OrderModal from "../Modals/Modal";
 

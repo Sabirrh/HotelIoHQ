@@ -1,4 +1,4 @@
-import { Link } from "react-router";
+import { Link } from "react-router-dom";
 import ConnectNav from "../componets/NavBar/ConnectNav";
 import DashboardNav from "../componets/NavBar/Dashboardnav";
 import { useDispatch, useSelector } from "react-redux";

@@ -20,6 +20,14 @@ import StripeCancel from "./stripe/StripeCancel";
 import SearchResult from "./hotels/SearchResult";
 
 function App() {
+  // 404 Fallback
+  const NotFound = () => (
+    <div className="text-center p-5">
+      <h1>404 - Page Not Found</h1>
+      <p>The page you are looking for does not exist.</p>
+    </div>
+  );
+
   return (
     <BrowserRouter>
       <TopNav />
@@ -85,15 +93,18 @@ function App() {
           }
         />
         <Route
-          path="/stripe/cencel"
+          path="/stripe/cancel"
           element={
             <PrivateRoute>
               <StripeCancel />
             </PrivateRoute>
           }
         />
-        <Route path="/hotel/:hotelId" Component={ViewHotel}/>
+        <Route path="/hotel/:hotelId" element={<ViewHotel />} />
         <Route path="/search-result" element={<SearchResult />} />
+        {/* 404 Fallback */}
+        <Route path="*" element={<NotFound />} />
+
       </Routes>
     </BrowserRouter>
   )
