@@ -6,6 +6,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import { register } from "../actions/auth";
 import RegisterForm from "../componets/RegisterForm/RegisterForm";
 import { Card } from 'antd';
+import { Link } from "react-router-dom";
 
 function Register() {
     const navigate = useNavigate();
@@ -65,9 +66,9 @@ function Register() {
 
                         <p className="text-center mt-3 text-muted">
                             Already have an account?{" "}
-                            <a href="/login" className="text-decoration-none">
+                            <Link to="/login" className="text-decoration-none">
                                 Login here
-                            </a>
+                            </Link>
                         </p>
 
 
