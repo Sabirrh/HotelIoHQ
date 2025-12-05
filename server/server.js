@@ -3,6 +3,7 @@ const fs = require('fs');
 const morgan = require('morgan');
 const mongoose = require('mongoose');
 const cors = require('cors');
+const cookieParser = require("cookie-parser");
 require('dotenv').config();
 
 const Port = process.env.PORT || 8000;
@@ -18,6 +19,7 @@ mongoose
 // Middleware to parse JSON
 app.use(cors());
 app.use(express.json());
+app.use(cookieParser());
 app.use(morgan('dev'))
 //route middleware 
 fs.readdirSync('./routes').forEach((file) => {

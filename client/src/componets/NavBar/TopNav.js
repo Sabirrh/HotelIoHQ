@@ -58,8 +58,9 @@ function TopNav() {
 
   const Logout = () => {
     dispatch({ type: "LOGOUT", payload: null });
-    window.localStorage.removeItem("auth");
+    // window.localStorage.removeItem("auth");
     navigate("/login");
+    // window.location.reload();
   };
 
   useEffect(() => {
