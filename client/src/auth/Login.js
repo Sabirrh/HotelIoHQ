@@ -95,6 +95,7 @@ import { toast, ToastContainer } from "react-toastify";
 import { login } from "../actions/auth";
 import LoginForm from "../componets/LoginForm/LoginForm";
 import "react-toastify/dist/ReactToastify.css";
+import { Link } from "react-router-dom";
 
 function Login() {
     const navigate = useNavigate();
@@ -149,8 +150,8 @@ function Login() {
                     />
 
                     <p className="text-center mt-3 text-muted">
-                        Don't have an account? <a href="/register" className="text-decoration-none">Register here</a>
-                    </p>
+                         Don't have an account? <Link to="/register" className="text-decoration-none">Register here</Link>
+                     </p>
                 </div>
             </div>
         </>
