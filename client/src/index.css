@@ -1,0 +1,77 @@
+.pointer {
+  cursor: pointer;
+}
+.ant-modal-footer {
+  display: none;
+}
+.avatar-sm {
+  width: 2rem;
+  height: 2rem;
+}
+.sticky-lg-top {
+  z-index: 1020;
+}
+.btn {
+  transition: all 0.2s ease-in-out;
+}
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+.rounded-4 {
+  border-radius: 1rem !important;
+}
+
+/* Smooth hover lift on cards */
+.small-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.small-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+}
+.card-hover {
+  transition: transform 0.2s, box-shadow 0.2s;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.75rem;
+  overflow: hidden;
+}
+.card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+}
+.img-zoom {
+  transition: transform 0.4s;
+  height: 100%;
+  object-fit: cover;
+}
+.card-hover:hover .img-zoom {
+  transform: scale(1.05);
+}
+.price-chip {
+  background: #f3f4f6;
+  color: #111827;
+  font-weight: 600;
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.875rem;
+}
+.btn-floating {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.4rem;
+  z-index: 1050;
+}
+#image {
+  display: none;
+}
+.cursor-pointer {
+  cursor: pointer;
+}
