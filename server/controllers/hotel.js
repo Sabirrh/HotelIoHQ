@@ -109,7 +109,7 @@ const hotels = async (req, res) => {
 const image = async (req, res) => {
     const hotel = await Hotel.findById(req.params.hotelId).exec();
     if (hotel && hotel.image && hotel.image.data !== null) {
-        res.set('Contenct-Type', hotel.image.contentType)
+        res.set('Content-Type', hotel.image.contentType)
         return res.send(hotel.image.data);
     }
 }

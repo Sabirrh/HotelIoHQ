@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { read, difDays, isAlreadyBooked } from "../actions/hotel";
-import { Link, useNavigate, useParams } from "react-router";
+import { Link, useNavigate, useParams } from "react-router-dom";
 import moment from 'moment';
 import { useSelector } from "react-redux";
 import { getSessionId } from "../actions/stripe";
-import { loadStripe } from '@stripe/stripe-js';
 
 const ViewHotel = () => {
     const [hotel, setHotel] = useState({});
@@ -65,52 +64,6 @@ const ViewHotel = () => {
         }
     };
 
-
-
-    // return (
-    //     <>
-    //         <div className="container-fluid bg-secondary p-5 font-bold text-center">
-    //             <h2>{hotel.title}</h2>
-    //         </div>
-    //         <div className="container-fluid">
-    //             <div className="row">
-    //                 <div className="col-md-6">
-    //                     <br />
-    //                     <img src={image} alt={hotel.title} className="img img-fluid m-2" />
-    //                 </div>
-    //                 <div className="col-md-6">
-    //                     <br />
-    //                     <b>{hotel.content}</b>
-    //                     <p className="alert alert-info mt-3">${hotel.price}</p>
-    //                     <p className="card-text">
-    //                         <span className="float-right text-primary">
-    //                             for {diff} {diff <= 1 ? "day" : "days"}
-    //                         </span>
-    //                     </p>
-    //                     <p>
-    //                         From <br /> {moment(new Date(hotel.from)).format("MMMM Do YYYY, h:mm:ss a")}
-    //                     </p>
-    //                     <p>
-    //                         To <br /> {moment(new Date(hotel.to)).format("MMMM Do YYYY, h:mm:ss a")}
-    //                     </p>
-
-    //                     <i>Posted by {hotel.postedBy && hotel.postedBy.name}</i>
-    //                     <br />
-    //                     <button
-    //                         className="btn btn-block btn-lg btn-primary mt-3"
-    //                         onClick={handleClick}
-    //                         disabled={loading || alreadyBooked}
-    //                     >
-    //                         {loading ? "Checking out.." : alreadyBooked ?"Already Booked" : auth && auth.token ? "Book Now" : "Login to Book"}
-    //                     </button>
-    //                 </div>
-    //                 <div>
-
-    //                 </div>
-    //             </div>
-    //         </div>
-    //     </>
-    // )
 
     return (
         <>
